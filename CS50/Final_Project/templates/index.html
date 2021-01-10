@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Personal Finance
+{% endblock %}
+
+{% block main %}
+    <table id="portfolio">
+    <h1>{{ month }}</h1>
+    <tr>
+        <th>ID No.</th>
+        <th>Income for the Month</th>
+        <th>Budgets</th>
+        <th>Amount Spent</th>
+        <th>Remaining Balance(Budget)</th>
+        <th>Remaining Balance(Income)</th>
+        <th>Remaining Balance(Savable)</th>
+    </tr>
+    {% for row in rows %}
+    <tr>
+        <td>{{ row["id"] }}</td>
+        {% if row["income"] > 0 %}
+        <td>{% if row["income"] == None %}
+                {{ na }}
+            {% else %}
+                ${{ row["income"] }}
+            {% endif %}</td>
+        <td>{% if row["budget"] == None %}
+                {{ na }}
+            {% else %}
+                ${{ row["budget"] }}
+            {% endif %}</td>
+        <td>{% if row["spent"] == None %}
+                {{ na }}
+            {% else %}
+                ${{ row["spent"] }}
+            {% endif %}</td>
+        <td>{% if row["balance_bg"] == None %}
+                {{ na }}
+            {% else %}
+                ${{ row["balance_bg"] }}
+            {% endif %}</td>
+        <td>{% if row["balance_ic"] == None %}
+                {{ na }}
+            {% else %}
+                ${{ row["balance_ic"] }}
+            {% endif %}</td>
+        <td>{% if row["balance_save"] == None %}
+                {{ na }}
+            {% else %}
+                ${{ row["balance_save"] }}
+            {% endif %}</td>
+        {% endif %}
+    </tr>
+    {% endfor %}
+
+    </table>
+{% endblock %}

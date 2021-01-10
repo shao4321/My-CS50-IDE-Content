@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href= "styles.css" rel="stylesheet">
+        <title>Your Occupation</title>
+        <script src="changeImage.js"></script>
+        <script src="emp.js"></script>
+    </head>
+    <body onload=set_time4()>
+        <div class="menu-bar">
+        <ul>
+            <li><a href="index.html">Basic Information</a></li>
+            <li><a href="hobby.html">Hobbies</a></li>
+            <li><a href="fam.html">Family Members</a></li>
+        </ul>
+        </div>
+        <header>
+            <h1>Occupation</h1>
+            <img src="10.jpg" width="550" height="300" id="data" alt="Occ Photos">
+            <h2>Employment Status</h2>
+        </header>
+            <label for="emp_status">Pick one of the category that best describes you.</label>
+            <select id="emp_status">
+                <option value="self_emp">Self-Employed</option>
+                <option value="emp">Employee</option>
+                <option value="wker">Worker</option>
+                <option value="unemp">Unemployed</option>
+            </select>
+            <form onsubmit="employee_status();return false"> <input type="submit"> </form>
+        <aside>
+            <div id="result_selfemp"></div>
+            <div id="result_emp"></div>
+            <div id="result_wker"></div>
+            <div id="result_unemp"></div>
+        </aside>
+        <footer>
+            © 2020 Lee Shao Wee Some Rights Reserved
+        </footer>
+    </body>
+</html>

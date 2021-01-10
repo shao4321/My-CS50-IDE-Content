@@ -1,0 +1,14 @@
+Points to take note:
+
+1) Does the algorithm terminate?
+    - By having a base case
+    - Calling recursion on smaller and smaller prices of information/inputs.
+
+2) Is the algorithm correct?
+
+3) Is it efficient? (What's the runtime?)
+
+We can distill the idea of recursion into two simple rules:
+
+- Each recursive call should be on a smaller instance of the same problem, that is, a smaller subproblem.
+- The recursive calls must eventually reach a base case, which is solved without further recursion.

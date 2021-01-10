@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href= "styles.css" rel="stylesheet">
+        <title>Family Members</title>
+        <script src="changeImage.js"></script>
+        <script src="family.js"></script>
+    </head>
+    <body onload=set_time3()>
+        <div class="menu-bar">
+        <ul>
+            <li><a href="index.html">Basic Information</a></li>
+            <li><a href="hobby.html">Hobbies</a></li>
+            <li><a href="occ.html">Occupation</a></li>
+        </ul>
+        </div>
+        <header>
+            <h1>Your Family Members' Age</h1>
+            <img src="7.jpg" width="500" height="300" id="data" alt="fam Photos">
+        </header>
+            How old is your Grandfather?
+            <form> <input type="number" id="GD_age"> </form>
+            How old is your Grandmother?
+            <form> <input type="number" id="GM_age"> </form>
+            How old is your Dad?
+            <form> <input type="number" id="dad_age"> </form>
+            How old is your Mum?
+            <form> <input type="number" id="mum_age"> </form>
+            Lastly, how old are you?
+            <form> <input type="number" id="my_age"> </form>
+            <form onsubmit="calculate_age_difference();return false"> <input type="submit"> </form>
+        <aside>
+            <div class="display" id="GD_diff"></div>
+            <div class="display" id="GM_diff"></div>
+            <div class="display" id="dad_diff"></div>
+            <div class="display" id="mum_diff"></div>
+            <div class="display" id="my_diff"></div>
+        </aside>
+        <footer>
+            © 2020 Lee Shao Wee Some Rights Reserved
+        </footer>
+    </body>
+</html>

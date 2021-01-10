@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href= "styles.css" rel="stylesheet">
+        <title>Your Hobbies</title>
+        <script src="changeImage.js"></script>
+        <script src="hobbyDisplay.js"></script>
+    </head>
+    <body onload=set_time2()>
+        <div class="menu-bar">
+        <ul>
+            <li><a href="index.html">Basic Information</a></li>
+            <li><a href="fam.html">Family Members</a></li>
+            <li><a href="occ.html">Occupation</a></li>
+        </ul>
+        </div>
+        <header>
+            <h1>Things you like to do</h1>
+            <img src="4.jpg" width="300" height="300" id="data" alt="Hobby Photos">
+        </header>
+            What do you enjoy doing?
+            <form> <input type="text" id="enjoy"> </form>
+            What is your favourite sports?
+            <form> <input type="text" id="sport"> </form>
+            <label for="choice">Do you like to play pool?</label>
+            <select id="choice">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <p>What is your favourite colour?</p>
+            <form> <input type="color" id="color"> </form>
+            <form onsubmit="displayInfos();return false"> <input type="submit"> </form>
+        <aside>
+            <table>
+                <tr>
+                    <th>Enjoying Doing</th>
+                    <th>Favourite Sports</th>
+                    <th>Interest in Pool</th>
+                    <th>Your Fav Color Code
+                        (In HEX & In RGBA)</th>
+                </tr>
+                <tr>
+                    <td><div id="resultEnjoy">Pending...</div></td>
+                    <td><div id="resultSport">Pending...</div></td>
+                    <td><div id="resultPool2">Pending...</div></td>
+                    <td><div id="resultColor1">Pending...</div>
+                        <div id="resultColor2"></div>
+                    </td>
+                </tr>
+            </table>
+            <div id="resultPool1"></div>
+        </aside>
+        <footer>
+            © 2020 Lee Shao Wee Some Rights Reserved
+        </footer>
+    </body>
+</html>

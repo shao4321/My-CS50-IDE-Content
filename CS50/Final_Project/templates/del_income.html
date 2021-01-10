@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Delete Income
+{% endblock %}
+
+{% block main %}
+    <form action="/del_income" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="month" placeholder="Month" type="text">
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="idno" placeholder="ID no." type="number">
+        </div>
+        <button class="btn btn-primary" type="submit">Delete</button></button>
+    </form>
+{% endblock %}
